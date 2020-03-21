@@ -1,0 +1,32 @@
+.list {
+  margin: 30px 0;
+  list-style: none;
+}
+
+.noReviews {
+  margin: 30px 0;
+}
+
+.noReviews span {
+  padding: 4px 8px;
+  background: rgb(115, 65, 231);
+  border-radius: 6px;
+  color: #fff;
+  line-height: 2.2;
+}
+
+.item {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.text {
+  word-wrap: break-word;
+}

@@ -1,0 +1,24 @@
+.list {
+  margin-top: 30px;
+  list-style: none;
+}
+
+.item {
+  margin: 20px 0;
+}
+
+.img {
+  height: 350px;
+  width: 100%;
+  margin-bottom: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.name {
+  padding: 4px 8px;
+  background: rgb(115, 65, 231);
+  border-radius: 6px;
+  color: #fff;
+  line-height: 2.2;
+}

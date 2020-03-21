@@ -1,0 +1,32 @@
+.form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.search {
+  display: block;
+  flex-basis: 65%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 2px solid rgb(115, 65, 231);
+  color: rgb(115, 65, 231);
+  font-size: 16px;
+}
+
+.submit {
+  display: block;
+  flex-basis: 20%;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 2px solid rgb(115, 65, 231);
+  background: rgb(115, 65, 231);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.submit:hover {
+  opacity: 0.6;
+}

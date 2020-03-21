@@ -1,0 +1,84 @@
+:global(.title-2) {
+  margin: 30px 0;
+}
+
+:global(.title-3) {
+  margin: 20px 0;
+}
+
+:global(.title-4) {
+  margin: 15px 0;
+}
+
+.btn {
+  margin-bottom: 20px;
+  padding: 8px 40px;
+  border-radius: 6px;
+  border: 2px solid rgb(115, 65, 231);
+  color: rgb(115, 65, 231);
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:focus,
+.btn:hover {
+  background: rgb(245, 101, 101);
+  border: 2px solid rgb(245, 101, 101);
+  color: #fff;
+}
+
+.genres {
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 16px;
+  padding: 2px 10px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  line-height: 1.8;
+  white-space: nowrap;
+}
+
+.aditional {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.tabList {
+  display: flex;
+  margin-top: 18px;
+  list-style: none;
+}
+
+.tab {
+  display: block;
+  margin-right: 8px;
+  padding: 8px 32px;
+  border-radius: 6px;
+  color: rgb(245, 101, 101);
+  border: 2px solid rgb(245, 101, 101);
+  transition: 0.3s ease-in-out;
+}
+
+.tab:focus,
+.tab:hover {
+  background: rgb(245, 101, 101);
+  border: 2px solid rgb(245, 101, 101);
+  color: #fff;
+}
+
+.top {
+  position: fixed;
+  right: 20px;
+  bottom: -110%;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background: #f9f9f9;
+  transition: 0.3s ease-in-out;
+}
+
+.top:hover {
+  background: rgb(245, 101, 101);
+  color: #fff;
+}
