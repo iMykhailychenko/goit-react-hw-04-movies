@@ -1,22 +1,9 @@
 import React, { Component } from 'react';
 import ReactRouterPropTypes from 'react-router-prop-types';
-
-// import components
 import Loader from 'react-loader-spinner';
-
-// import styles
 import styles from './Reviews.module.css';
-
 import { moviesFetch } from '../Utils/dataFetch';
-
-const KEY = '9d6e1ea09b630bd9f25250a95c28140d';
-const structuringDatatFromeFetch = results => {
-  return results.map(({ author, content, id }) => ({
-    author,
-    content,
-    id,
-  }));
-};
+import { KEY, structuringDatatFromeFetchReviews } from '../Utils/helpers';
 
 export default class Reviews extends Component {
   static propTypes = {
@@ -38,7 +25,7 @@ export default class Reviews extends Component {
 
     moviesFetch(KEY, params).then(({ results }) => {
       if (results.lenght) return;
-      const reviewsInfo = structuringDatatFromeFetch(results);
+      const reviewsInfo = structuringDatatFromeFetchReviews(results);
 
       this.setState({ reviews: [...reviewsInfo], isLoading: false });
     });

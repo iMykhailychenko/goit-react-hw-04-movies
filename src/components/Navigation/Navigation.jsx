@@ -6,7 +6,12 @@ import styles from './Navigation.module.css';
 const Navigation = () => (
   <header className={styles.header}>
     <nav className={styles.nav}>
-      <NavLink to="/" exact className={styles.link} activeClassName="active-link">
+      <NavLink
+        to="/"
+        exact
+        className={styles.link}
+        activeClassName="active-link"
+      >
         Home page
       </NavLink>
       <NavLink

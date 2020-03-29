@@ -3,24 +3,16 @@ import queryString from 'query-string';
 import ReactRouterPropTypes from 'react-router-prop-types';
 
 import Loader from 'react-loader-spinner';
-import MoviesList from '../MoviesList/MoviesList';
-import { searchFetch } from '../Utils/dataFetch';
+import MoviesList from '../../MoviesList/MoviesList';
+import { searchFetch } from '../../Utils/dataFetch';
+import { KEY, structuringDatatFromeFetch } from '../../Utils/helpers';
 import styles from './MoviesPage.module.css';
 import wall from './movies.jpg';
-
-const KEY = '9d6e1ea09b630bd9f25250a95c28140d';
-const structuringDatatFromeFetch = results => {
-  return results.map(({ title, id }) => {
-    const correctTitle = title.length < 40 ? title : title.slice(0, 40) + '...';
-    return { title: correctTitle, id };
-  });
-};
 
 export default class MoviesPage extends Component {
   static propTypes = {
     history: ReactRouterPropTypes.history.isRequired,
     location: ReactRouterPropTypes.location.isRequired,
-    match: ReactRouterPropTypes.match.isRequired,
   };
 
   state = {

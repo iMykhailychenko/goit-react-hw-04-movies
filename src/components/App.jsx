@@ -1,27 +1,22 @@
-// import react elements
 import React, { Component, Suspense, lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
-
-// import styles
-import './App.module.css';
-
-// impor components
 import Loader from 'react-loader-spinner';
 import Navigation from './Navigation/Navigation';
+import './App.module.css';
 
 const AsyncHomePage = lazy(() =>
-  import('./HomePage/HomePage' /* webpackChunkName: "home-page" */),
+  import('./pages/HomePage/HomePage' /* webpackChunkName: "home-page" */),
 );
 const AsyncMovieDetailsPage = lazy(() =>
   import(
-    './MovieDetailsPage/MovieDetailsPage' /* webpackChunkName: "movie-details-page" */
+    './pages/MovieDetailsPage/MovieDetailsPage' /* webpackChunkName: "movie-details-page" */
   ),
 );
 const AsyncMoviesPage = lazy(() =>
-  import('./MoviesPage/MoviesPage' /* webpackChunkName: "movies-page" */),
+  import('./pages/MoviesPage/MoviesPage' /* webpackChunkName: "movies-page" */),
 );
 const AsyncNotFound = lazy(() =>
-  import('./NotFound/NotFound' /* webpackChunkName: "not-found" */),
+  import('./pages/NotFound/NotFound' /* webpackChunkName: "not-found" */),
 );
 
 export default class App extends Component {

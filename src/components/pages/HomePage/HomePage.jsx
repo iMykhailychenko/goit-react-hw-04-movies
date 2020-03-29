@@ -1,34 +1,18 @@
 // react
 import React, { Component } from 'react';
 import ReactRouterPropTypes from 'react-router-prop-types';
-
-// components
 import Loader from 'react-loader-spinner';
-import MoviesList from '../MoviesList/MoviesList';
-
-// utils
-import { moviesFetch } from '../Utils/dataFetch';
-
-// styles
+import MoviesList from '../../MoviesList/MoviesList';
+import { moviesFetch } from '../../Utils/dataFetch';
 import styles from './HomePage.module.css';
-
-// other
 import wall from './front-page.jpg';
+import { KEY, structuringDatatFromeFetch } from '../../Utils/helpers';
 
-const KEY = '9d6e1ea09b630bd9f25250a95c28140d';
 const FETCHPARAMS = 'trending/movie/day';
-const structuringDatatFromeFetch = results => {
-  return results.map(({ title, id }) => {
-    const correctTitle = title.length < 40 ? title : title.slice(0, 40) + '...';
-    return { title: correctTitle, id };
-  });
-};
 
 export default class HomePage extends Component {
   static propTypes = {
-    history: ReactRouterPropTypes.history.isRequired,
     location: ReactRouterPropTypes.location.isRequired,
-    match: ReactRouterPropTypes.match.isRequired,
   };
 
   state = {

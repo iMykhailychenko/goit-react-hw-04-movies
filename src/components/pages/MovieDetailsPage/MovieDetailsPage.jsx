@@ -3,17 +3,16 @@ import { Route, Link } from 'react-router-dom';
 import ReactRouterPropTypes from 'react-router-prop-types';
 
 import Loader from 'react-loader-spinner';
-import { moviesFetch } from '../Utils/dataFetch';
+import { moviesFetch } from '../../Utils/dataFetch';
+import { KEY } from '../../Utils/helpers';
 import styles from './MovieDetailsPage.module.css';
 
 const AsyncReviews = lazy(() =>
-  import('../Reviews/Reviews' /* webpackChunkName: "reviews" */),
+  import('../../Reviews/Reviews' /* webpackChunkName: "reviews" */),
 );
 const AsyncCast = lazy(() =>
-  import('../Cast/Cast' /* webpackChunkName: "Ccst" */),
+  import('../../Cast/Cast' /* webpackChunkName: "Ccst" */),
 );
-
-const KEY = '9d6e1ea09b630bd9f25250a95c28140d';
 const FETCHPARAMS = 'movie/';
 
 export default class MovieDetailsPage extends Component {
@@ -42,7 +41,6 @@ export default class MovieDetailsPage extends Component {
       },
     );
 
-    // events
     window.addEventListener('scroll', this.handleScroll);
   }
 
@@ -64,9 +62,10 @@ export default class MovieDetailsPage extends Component {
   handleClick = () => {
     const { history } = this.props;
     const { state } = this.props.location;
+    const newState = state ? state : { pathname: '/' };
 
     history.push({
-      ...state,
+      ...newState,
     });
   };
 
